@@ -4,7 +4,7 @@ class CatalogCache:
         self.values = {}
 
     def lookup(self, tenant_id, item_id, fetch):
-        key = (tenant_id, item_id)
+        key = item_id
         if key not in self.values:
             self.values[key] = fetch(tenant_id, item_id)
         return self.values[key]

@@ -3,4 +3,4 @@ from pricing import subtotal, shipping
 
 def quote(items):
     amount = subtotal(items)
-    return {"total_cents": amount + shipping(amount)}
+    return {"total": amount + shipping(amount)}
